@@ -29,7 +29,22 @@ Ownership
 경태 - list.c
 
 Function Descriptions
-(함수 정리되는 데로 업데이트)
+	1. node_count
+		input: head,cur
+		output:		
+	2.print forward
+		input: head, cur
+		output: 
+	3. del_odd_element
+		input: head, cur
+		output:
+	4. print_backward
+		input: first, head, num
+		output:
+	5. printf_middle
+		input: first, head, num
+		output:
+
 
 Declaration of important data and data types in user header file
 	name - list.h

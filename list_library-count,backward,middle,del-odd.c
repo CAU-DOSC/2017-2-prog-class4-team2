@@ -1,18 +1,5 @@
 #include "list.h"
 
-int node_count(LINK first,LINK head)
-{
-	int count=0;
-	head=first;
-	while(head!=NULL)
-	{
-		count++;
-		head=head->next;
-	}
-
-	return count;
-}
-
 
 void print_backward(LINK first, LINK head, int num)
 {
@@ -42,10 +29,24 @@ void print_middle(LINK first, LINK head, int num)
 			head=head->next;
 	printf("\nMiddle :%d",head->value);
 }
-
+/*
 void del_odd_element(LINK first, LINK head, int num)
 {
 	first=first->next;
 	head=first;
 }
+
+int node_count(LINK first,LINK head)
+{
+	int count=0;
+	head=first;
+	while(head!=NULL)
+	{
+		count++;
+		head=head->next;
+	}
+
+	return count;
+}
+*/
 
