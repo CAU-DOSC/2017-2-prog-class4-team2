@@ -29,8 +29,14 @@ Ownership
 경태 - list.c
 
 Function Descriptions
+(함수 정리되는 데로 업데이트)
 
 Declaration of important data and data types in user header file
+	name - list.h
+	header lnclude - stdio.h, stdlib.h
+	struct name - node(Node)
+	data- int value, struct node *next
+
 
 
 list.h: 헤더 파일
