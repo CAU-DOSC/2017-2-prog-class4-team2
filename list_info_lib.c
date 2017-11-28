@@ -1,9 +1,9 @@
 #include "list.h"
 
-int node_count(LINK head, LINK cur)
+int node_count(LINK head)
 {
 	int count = 0;
-	cur = head;
+	LINK cur = head;
 
 	while (cur != NULL)
 	{

@@ -45,9 +45,9 @@ void print_middle(LINK first, LINK head, int num)
 	return;
 }
 
-void print_forward(LINK head, LINK cur)
+void print_forward(LINK head)
 {
-	cur = head;
+	LINK cur = head;
 
 	while (cur)
 	{
@@ -60,17 +60,23 @@ void print_forward(LINK head, LINK cur)
 	return;
 }
 
-void del_odd_element(LINK head, LINK cur)
+LINK del_odd_element(LINK head, int num_node)
 {
-	head = head->next;
+	int odd = 0;
+	LINK cur = head->next;
+	head = cur;
 
-	while (cur != NULL || cur->next != NULL)
+	if (num_node % 2 == 0)
+		odd = num_node / 2 - 1;
+
+	else
+		odd = num_node / 2;
+
+	for (int i = 0; i < odd; i++)
 	{
-		printf("%d ", cur->value);
-		cur = cur->next;
+		head->next = head->next->next;
+		head = head->next;
 	}
 
-	printf("\n\n");
-
-	return;
+	return cur;
 }
