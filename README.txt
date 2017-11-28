@@ -24,7 +24,7 @@ Your description start form next line and do not delete lines upto this point.
 
 <Ownership>
 의섭 - 조장/ README.txt
-민기 - list.h(헤더파일)
+민기 - list.h(사용자 정의 헤더파일)
 성규 - list_library-count,backward,middle,del-odd.c (리스트 역순 출력, 리스트 중간 노드 값 출력)
 동진 - list_library-forward,odd.c (리스트 정순 출력, 리스트 홀수번째 노드 값 출력)
 경태 - linklist.c(메인 c파일)
