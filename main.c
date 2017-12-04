@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 char* T_bw(char*,int,int);
-char* T_rev(char*,int,int);
+char* T_rev(char*,int);
 char* T_triv(char*,int,int);
 char* T_jugg(char*,int,int);
 
@@ -20,7 +20,7 @@ int main()
 	printf("Trivial    : %s",T_triv(str,d,n));
         printf("Juggling   : %s",T_jugg(str,d,n));
 	printf("Block-swap : %s",T_bw(str,d,n));
-	printf("Reverse    : %s",T_rev(str,d,n));
+	printf("Reverse    : %s",T_rev(str,n));
 
 	return 0;
 }
