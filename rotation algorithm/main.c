@@ -1,29 +1,26 @@
-#define _CRT_SECURE_NO_WARNINGS
+#include <stdio.h>
 
-#include<stdio.h>
-#include<stdlib.h>
+double T_bw(char*, int, int);
+double T_rev(char*, int);
+double T_triv(char*, int, int);
+double T_jugg(char*, int, int);
 
-char * T_trivial(char * inputstr, int d, int n);
-char * T_juggle(char * inputstr, int d, int n);
-char * T_bw(char *inputstr, int d, int n);
-
-int main(void)
+int main()
 {
-	int n, d;
-	scanf("%s", &n);
-	scanf("%d", &d);
+	int n = 0;
+	int d = 0;
 
-	char* inputstr = (char*)malloc(sizeof(char)*n) ;
+	printf("Enter the number to do work(d) and number of size of string(n) :");
+	scanf("%d %d", &d, &n);
 
-	scanf("%s", inputstr);
+	char *str = (char*)malloc(sizeof(char)*(n + 1));
+	gets(str);
 
-	printf("T_trivial : %s", T_trivial(inputstr, d, n));
-
-	printf("T_juggle : %s", T_juggle(inputstr, d, n));
-
-	printf("T_bw : %s", T_bw(inputstr, d, n));
-
-	printf("T_reverse%s", T_reverse(inputstr, d, n));
+	printf("Trivial    : %lf", T_triv(str, d, n));
+	printf("Juggling   : %lf", T_jugg(str, d, n));
+	printf("Block-swap : %lf", T_bw(str, d, n));
+	printf("Reverse    : %lf", T_rev(str, n));
 
 	return 0;
 }
+
