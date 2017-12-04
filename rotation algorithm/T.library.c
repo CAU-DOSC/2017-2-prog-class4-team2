@@ -1,3 +1,5 @@
+#define _CRT_SECURE_NO_WARNINGS
+
 #include<stdlib.h>
 #include<string.h>
 #include<stdio.h>
@@ -45,7 +47,7 @@ char * T_juggle(char * inputstr, int d, int n)
 	int i, j;
 	if (d > 0)
 	{
-		for (i == 0; i < n; i++)
+		for (i = 0; i < n; i++)
 		{
 			if (i - (d%n) > 0)
 			{
@@ -72,6 +74,7 @@ char * T_bw(char *inputstr, int d, int n)
 
 		strcat(B, A);
 		printf("%s", B);
+		return B;
 	}
 }
 
@@ -86,12 +89,12 @@ char * T_reverse(char *inputstr, int d, int n)
 	strcpy(B, inputstr + (d));
 	printf("B: %s\n", B);
 
-	A = strrev(A);
-	B = strrev(B);
+	A = _strrev(A);
+	B = _strrev(B);
 	
 	strcat(B, A);
 	
-	B = strrev(B);
+	B = _strrev(B);
 	
 	return B;
 }

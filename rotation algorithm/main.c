@@ -1,3 +1,5 @@
+#define _CRT_SECURE_NO_WARNINGS
+
 #include<stdio.h>
 #include<stdlib.h>
 
@@ -9,6 +11,7 @@ int main(void)
 {
 	int n, d;
 	scanf("%s", &n);
+	scanf("%d", &d);
 
 	char* inputstr = (char*)malloc(sizeof(char)*n) ;
 

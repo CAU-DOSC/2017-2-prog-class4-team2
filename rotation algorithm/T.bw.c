@@ -3,17 +3,19 @@
 
 #include <stdio.h>
 #include <time.h>
+#include <string.h>
 
 double T_bw(char *, int, int);
 
 int main(void)
 {
-	int d,n;//d: rotate distance//n:Length
-	printf("enter n and d:  ");
-	scanf("%d %d",&n,&d);
-	char inputstr[n];
-	printf("%.100lf\n", T_bw(inputstr, d, n));
-	printf("%s\n", inputstr);
+	char string[LENGTH];
+	int d;
+
+	scanf("%s", string);
+	scanf("%d", &d);
+
+	printf("%lf", T_bw(string, d, LENGTH - 1));
 }
 
 double T_bw(char * inputstr, int d, int n)
@@ -28,7 +30,7 @@ double T_bw(char * inputstr, int d, int n)
 	char temp;
 
 	while (d >= n)
-		d-=n;
+		d--;
 	// when d >= n, reduce d until d < n
 
 	if (d < (n - d))
@@ -38,17 +40,21 @@ double T_bw(char * inputstr, int d, int n)
 		A[d] = '\0';
 		printf("A: %s\n", A);
 	
-		char * B = (char *)malloc(sizeof(char)*(n-2d+1));
-		strncpy(B, inputstr+d, (n-2d));
-		B[n-2d] = '\0';
+		char * B = (char *)malloc(sizeof(char)*(n-2*d+1));
+		strncpy(B, inputstr+d, (n-2*d));
+		B[n-2*d] = '\0';
 		printf("B: %s\n", B);
 		printf("%s\n", inputstr);
 		
-		char * Br = (char *)malloc(sizeof(char)*(d+1);
+		char * Br = (char *)malloc(sizeof(char)*(d+1));
 		strcpy(Br, inputstr + (n-d));
 		printf("Br: %s\n", Br);
 		printf("%s\n", inputstr);
 		
+		strcat(Br, B);
+		strcat(Br, A);
+		printf("%s", Br);
+
 		end = clock();
 		time = (double)(end - start);
 
