@@ -8,6 +8,7 @@ This text file describes brief but precise and complete specification of project
 
 Your description start form next line and do not delete lines upto this point.
 - - -- - -- - -- - -- - -- - -- - -- - -- - -- - -- - -- - -- - -- - -- - -- - -- - -- - -- - -- - -- - -- - -- - -- - -- - -- - -- - -- - -- - -- - -- - -- - -- - -- - -- - -- - -- 
+					 #	Second Project	#
 <PROJECT OUTLINE>
 
 1. 두 정수를 입력받는다.(각각 n(문자열의 길이) 과 d(로테이션갯수), )
@@ -41,7 +42,7 @@ Your description start form next line and do not delete lines upto this point.
 	T.juggle.c		정수형(문자열의 길이, rotation 값),문자형(문자열)					문자형(변환한 문자열)
 
 
-	GCD			정수형(GCD를 구할 두 정수)								정수형(GCD)
+	GCD				정수형(GCD를 구할 두 정수)											정수형(GCD)
 
 
 	T.bw.c			
