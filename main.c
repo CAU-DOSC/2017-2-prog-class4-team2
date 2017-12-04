@@ -1,17 +1,18 @@
 #include <stdio.h>
 
-double T_bw(char*,int,int);
-double T_rev(char*,int,int);
-double T_triv(char*,int,int);
-double T_jugg(char*,int,int);
+char* T_bw(char*,int,int);
+char* T_rev(char*,int,int);
+char* T_triv(char*,int,int);
+char* T_jugg(char*,int,int);
 
 int main()
 {
 	int n=0;
 	int d=0;
 
-	printf("Enter the number of size of string :");
-	scanf("%d",&n);
+	printf("Enter the  number to do work(d) and number of size of string(n) :");
+	scanf("%d %d",&d,&n);
+	
 
 	char*str=(char*)malloc(sizeof(char)*n);
 	gets(str);
