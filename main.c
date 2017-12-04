@@ -13,9 +13,9 @@ int main()
 	printf("Enter the  number to do work(d) and number of size of string(n) :");
 	scanf("%d %d",&d,&n);
 	
-
+	printf("Enter the string :");
 	char*str=(char*)malloc(sizeof(char)*n);
-	gets(str);
+	scanf("%s",str);
 
 	printf("Trivial    : %s",T_triv(str,d,n));
         printf("Juggling   : %s",T_jugg(str,d,n));
