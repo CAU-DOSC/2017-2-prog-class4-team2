@@ -1,9 +1,9 @@
 #include <stdio.h>
 
-char* T_bw(char*,int,int);
-char* T_rev(char*,int);
-char* T_triv(char*,int,int);
-char* T_jugg(char*,int,int);
+double T_bw(char*,int,int);
+double T_rev(char*,int);
+double T_triv(char*,int,int);
+double T_jugg(char*,int,int);
 
 int main()
 {
@@ -13,14 +13,11 @@ int main()
 	printf("Enter the  number to do work(d) and number of size of string(n) :");
 	scanf("%d %d",&d,&n);
 	
-
 	char*str=(char*)malloc(sizeof(char)*n);
 	gets(str);
 
-	printf("Trivial    : %s",T_triv(str,d,n));
-        printf("Juggling   : %s",T_jugg(str,d,n));
-	printf("Block-swap : %s",T_bw(str,d,n));
-	printf("Reverse    : %s",T_rev(str,n));
+	printf("STR Length\tROTATE Distance\tT.trivial\tT.juggle\tT.bw\tT.reverse\n");
+	printf("%d\t%d\t%lf\t%lf\t%lf\t%lf", n,d,T_triv(str, d, n), T_jugg(str, d, n), T_bw(str, d, n), T_rev(str, n));
 
 	return 0;
 }
