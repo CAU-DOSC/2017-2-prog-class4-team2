@@ -8,14 +8,15 @@ double T_bw(char *, int, int);
 
 int main(void)
 {
-	char string[LENGTH];
-	scanf("%s", string);
-
-	printf("%.100lf\n", T_bw(string, 6, LENGTH - 1));
-	printf("%s\n", string);
+	int d,n;//d: rotate distance//n:Length
+	printf("enter n and d:  ");
+	scanf("%d %d",&n,&d);
+	char inputstr[n];
+	printf("%.100lf\n", T_bw(inputstr, d, n));
+	printf("%s\n", inputstr);
 }
 
-double T_bw(char * string, int d, int length)
+double T_bw(char * inputstr, int d, int n)
 {
 	// d is displacement of the characters before and after change
 
@@ -23,37 +24,40 @@ double T_bw(char * string, int d, int length)
 	double time;
 
 	start = clock();
-
+	int i;
 	char temp;
 
-	while (d >= length)
-		d--;
-	// when d >= length, reduce d until d < length
+	while (d >= n)
+		d-=n;
+	// when d >= n, reduce d until d < n
 
-	if (d < length - d)
+	if (d < (n - d))
 	{
-		for (int i = 0; i < d; i++)
-		{
-			temp = *(string + i);
-			*(string + i) = *(string + length - d + i);
-			*(string + length - d + i) = temp;
-		}
-		printf("%s\n", string);
-
+		char * A = (char*)malloc(sizeof(char)*(d + 1));
+		strncpy(A, inputstr, d);
+		A[d] = '\0';
+		printf("A: %s\n", A);
+	
+		char * B = (char *)malloc(sizeof(char)*(n-2d+1));
+		strncpy(B, inputstr+d, (n-2d));
+		B[n-2d] = '\0';
+		printf("B: %s\n", B);
+		printf("%s\n", inputstr);
+		
+		char * Br = (char *)malloc(sizeof(char)*(d+1);
+		strcpy(Br, inputstr + (n-d));
+		printf("Br: %s\n", Br);
+		printf("%s\n", inputstr);
+		
 		end = clock();
 		time = (double)(end - start);
 
-		return (time + T_bw(string, d, length - d));
+		return (time + T_bw(inputstr, d, n - d));
 	}
-	else if (d == length - d)
+	else if (d == (n - d))
 	{
-		for (int i = 0; i < d; i++)
-		{
-			temp = *(string + i);
-			*(string + i) = *(string + length - d + i);
-			*(string + length - d + i) = temp;
-		}
-		printf("%s\n", string);
+		
+		printf("%s\n", inputstr);
 
 		end = clock();
 		time = end - start;
@@ -62,17 +66,12 @@ double T_bw(char * string, int d, int length)
 	}
 	else
 	{
-		for (int i = 0; i < length - d; i++)
-		{
-			temp = *(string + i);
-			*(string + i) = *(string + i + d);
-			*(string + i + d) = temp;
-		}
-		printf("%s\n", string);
+		
+		printf("%s\n", inputstr);
 
 		end = clock();
 		time = end - start;
 
-		return (time + T_bw(string + length - d, d, d));
+		return (time + T_bw(inputstr + n - d, d, d));
 	}
 }
