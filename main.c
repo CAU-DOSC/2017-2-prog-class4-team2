@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include<time.h>
 
 double T_bw(char*,int,int);
 double T_rev(char*,int);
@@ -15,10 +16,11 @@ int main()
 	
 <<<<<<< HEAD
 =======
-	printf("Enter the string :");
 >>>>>>> e56e6486642ab5791f02bcaefdf8d8dc801b7542
 	char*str=(char*)malloc(sizeof(char)*n);
-	scanf("%s",str);
+	srand(time(NULL));
+	for(int i=0;i<n;i++)
+		str[i]=(rand()%26)+65;
 
 	printf("STR Length\tROTATE Distance\tT.trivial\tT.juggle\tT.bw\tT.reverse\n");
 	printf("%d\t%d\t%lf\t%lf\t%lf\t%lf", n,d,T_triv(str, d, n), T_jugg(str, d, n), T_bw(str, d, n), T_rev(str, n));
