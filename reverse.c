@@ -1,8 +1,7 @@
-char* T_rev(char*str, int n)
+double T_rev(char*str, int n)
 {
 	clock_t=start,end;
 	double time;
-	double*ptime=&time;
 	
 	start=clock();
 	char *temp = (char*)malloc(sizeof(char)*(n+1));
@@ -14,5 +13,5 @@ char* T_rev(char*str, int n)
 	
 	time=end-start;
 	
-	return temp;
+	return time;
 }
