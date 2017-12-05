@@ -17,17 +17,16 @@ Your description start form next line and do not delete lines upto this point.
 	# main 함수에서는 각각의 case에 대한 소요시간값을 받는다.
 3. 출력하려는 값
 	- 입력된 문자열의 길이를 출력
-	- rotation 값을 출력
 	- 4가지 함수의 반환값을 출력
 	- 4가지 함수 각각의 소요시간을 출력
 - - -- - -- - -- - -- - -- - -- - -- - -- - -- - -- - -- - -- - -- - -- - -- - -- - -- - -- - -- - -- - -- - -- - -- - -- - -- - -- - -- - -- - -- - -- - -- - -- - -- - -- - -- - -- 
 
 <Ownership>
 의섭 - 조장/ README2.txt/T.Juggle.c
-민기 - 
-성규 - 
-동진 - 
-경태 - 
+민기 - main.c
+성규 - triv.c
+동진 - T.bw.c
+경태 - T.bw.c/ reverse.c
 
 *
 
@@ -42,7 +41,7 @@ Your description start form next line and do not delete lines upto this point.
 	T.juggle.c		정수형(문자열의 길이, rotation 값),문자형(문자열)					문자형(변환한 문자열)
 
 
-	GCD				정수형(GCD를 구할 두 정수)											정수형(GCD)
+	GCD			정수형(GCD를 구할 두 정수)								정수형(GCD)
 
 
 	T.bw.c			
@@ -62,14 +61,18 @@ Your description start form next line and do not delete lines upto this point.
 
 1. 입력받은 문자열에 대한 각각의 함수 구성
 
-2. trival
+2. trivial
 
 3. juggle
-	GCD 함수를 제작하여 보다 간단한 juggle 함수 구현.
+	trivial를 gcd를 이용하여 보다 간소화 시킨 함수
 
-4. bw
+4. GCD
+	juggle함수의 간소화를 위하여 GCD 함수 구현
 
-5. reverse
 
-6. 시간 계산
+5. bw
+
+6. reverse
+
+7. 시간 계산
 	 time.h 를 이용하여 각각의 함수에서 결과값을 반환해내는데 소요된 시간을 계산
