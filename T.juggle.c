@@ -1,8 +1,14 @@
 #include<Stdio.h>
-
-char * T_juggle(char * inputstr, int d, int n)
+#include<time.h>
+double T_juggle(char * inputstr, int d, int n)
 {
+	time_t start,end;
+	double time;
 	int h, i, j, k, l, gcd, temp, da;
+	
+	start=clock();
+	
+	
 	while(d>n)
 	d-=n;
 	if(d<0)
@@ -50,7 +56,11 @@ char * T_juggle(char * inputstr, int d, int n)
 		}
 	}
 	
-	return inputstr;
+	end=clock();
+	
+	time=(start-end)/CLOCKS_PER_SEC;
+	
+	return time;
 }
 
 
