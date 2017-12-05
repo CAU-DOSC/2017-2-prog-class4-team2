@@ -1,18 +1,5 @@
 #include<Stdio.h>
 
-int GCD(int a, int b)
-{
-	int i;
-	int gcd=1;
-	for(i=2;i<=(a > b ? b : a);i++)
-	{
-		if(a % i == 0 && b % i == 0)
-		gcd=i;
-	}
-	return gcd;
-}
-
-
 char * T_juggle(char * inputstr, int d, int n)
 {
 	int h, i, j, k, l, gcd, temp, da;
@@ -66,12 +53,4 @@ char * T_juggle(char * inputstr, int d, int n)
 	return inputstr;
 }
 
-int main()
-{
-	int n,d;
-	scanf("%d %d",&n,&d);
-	char arr[n];
-	scanf("%s", arr);
-	*arr = *T_juggle(arr , d, n);
-	puts(arr);
-}
+
