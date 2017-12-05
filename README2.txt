@@ -22,7 +22,7 @@ Your description start form next line and do not delete lines upto this point.
 - - -- - -- - -- - -- - -- - -- - -- - -- - -- - -- - -- - -- - -- - -- - -- - -- - -- - -- - -- - -- - -- - -- - -- - -- - -- - -- - -- - -- - -- - -- - -- - -- - -- - -- - -- - -- 
 
 <Ownership>
-의섭 - 조장/ README2.txt/T.Juggle.c
+의섭 - 조장/ README2.txt/T.Juggle.c/gc.c
 민기 - main.c
 성규 - triv.c
 동진 - T.bw.c
@@ -35,19 +35,19 @@ Your description start form next line and do not delete lines upto this point.
 <Function Descriptions(이 표를 보기 위해 필요한 typedef 정보 - typedef struct node * Node * & typedef *Node LINK)>
 	name	        	input parameter(전달된 인자의 자료형과 인자정보())   			           	output parameter(함수의 반환 자료형과 반환값 정보())
 	------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-	T.trivial.c  		     				            		
+	T.trivial.c  		정수형(문자열의 길이, rotation 값),문자형(문자열)     				        실수형(소요시간)		
 
 
-	T.juggle.c		정수형(문자열의 길이, rotation 값),문자형(문자열)					문자형(변환한 문자열)
+	T.juggle.c		정수형(문자열의 길이, rotation 값),문자형(문자열)					실수형(소요시간)
 
 
 	GCD			정수형(GCD를 구할 두 정수)								정수형(GCD)
 
 
-	T.bw.c			
+	T.bw.c			정수형(문자열의 길이, rotation 값),문자형(문자열) 					실수형(소요시간)
 
 
-	T.reverse.c		
+	T.reverse.c		정수형(문자열의 길이, rotation 값),문자형(문자열)					실수형(소요시간)
 
 
 - - -- - -- - -- - -- - -- - -- - -- - -- - -- - -- - -- - -- - -- - -- - -- - -- - -- - -- - -- - -- - -- - -- - -- - -- - -- - -- - -- - -- - -- - -- - -- - -- - -- - -- - -- - -- 
